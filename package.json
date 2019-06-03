@@ -1,0 +1,23 @@
+{
+	"name": "natours",
+	"version": "1.0.0",
+	"description": "landing page for natours",
+	"main": "index.js",
+	"scripts": {
+		"build-css": "sass sass/_main.scss css/style.css",
+		"watch-css": "sass --watch sass/_main.scss:css/style.css"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/alex9692/natours-css.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/alex9692/natours-css/issues"
+	},
+	"homepage": "https://github.com/alex9692/natours-css#readme",
+	"devDependencies": {
+		"node-sass": "^4.12.0"
+	}
+}
