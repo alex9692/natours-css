@@ -8,6 +8,9 @@
 	transition: all 200ms;
 	position: relative;
 	font-size: $default-font;
+	
+	border: none;
+	cursor: pointer;
 }
 
 .btn {
@@ -15,6 +18,9 @@
 		@extend %btn-section;
 	}
 	&:visited {
+		@extend %btn-section;
+	}
+	& {
 		@extend %btn-section;
 	}
 	&:hover {
@@ -26,7 +32,9 @@
 			opacity: 0;
 		}
 	}
-	&:active {
+	&:active,
+	&:focus {
+		outline: none;
 		transform: translateY(-0.1rem);
 		box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
 	}
