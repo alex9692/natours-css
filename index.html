@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
 		<link
 			href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
 			rel="stylesheet"
@@ -161,7 +160,28 @@
 					<div class="col-1-of-2">
 						<div class="composition">
 							<img
-								src="img/nat-1-large.jpg"
+								srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+								sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 45vw, 300px"
+								alt="photo-1"
+								class="composition__photo composition__photo--p1"
+								
+							/>
+
+							<img
+								srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+								sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 45vw, 300px"
+								alt="photo-2"
+								class="composition__photo composition__photo--p2"
+							/>
+
+							<img
+								srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+								sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 45vw, 300px"
+								alt="photo-3"
+								class="composition__photo composition__photo--p3"
+							/>
+
+							<!-- <img
 								alt="photo-1"
 								class="composition__photo composition__photo--p1"
 							/>
@@ -174,7 +194,7 @@
 								src="img/nat-3-large.jpg"
 								alt="photo-3"
 								class="composition__photo composition__photo--p3"
-							/>
+							/> -->
 						</div>
 					</div>
 				</div>
@@ -241,7 +261,7 @@
 				</div>
 			</section>
 
-			<section class="section-tours">
+			<section class="section-tours" id="section-tours">
 				<div class="u-center-text u-margin-bottom-big">
 					<h2 class="heading-secondary">
 						Most popular tours
@@ -273,7 +293,7 @@
 										<div class="card__price-only">Only</div>
 										<div class="card__price-value">$297</div>
 									</div>
-									<a href="#" class="btn btn--white">Book now!</a>
+									<a href="#popup" class="btn btn--white">Book now!</a>
 								</div>
 							</div>
 						</div>
@@ -303,7 +323,7 @@
 										<div class="card__price-only">Only</div>
 										<div class="card__price-value">$497</div>
 									</div>
-									<a href="#" class="btn btn--white">Book now!</a>
+									<a href="#popup" class="btn btn--white">Book now!</a>
 								</div>
 							</div>
 						</div>
@@ -333,7 +353,7 @@
 										<div class="card__price-only">Only</div>
 										<div class="card__price-value">$897</div>
 									</div>
-									<a href="#" class="btn btn--white">Book now!</a>
+									<a href="#popup" class="btn btn--white">Book now!</a>
 								</div>
 							</div>
 						</div>
@@ -478,7 +498,20 @@
 		</main>
 		<footer class="footer">
 			<div class="footer__logo-box">
-				<img src="img/logo-green-2x.png" alt="Full Logo" class="footer__logo" />
+				<picture class="footer__logo-box">
+					<source
+						srcset="
+							img/logo-green-small-1x.png 1x,
+							img/logo-green-small-2x.png 2x
+						"
+						media="(max-width: 37.5em)"
+					/>
+					<img
+						srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+						alt="Full Logo"
+						src="img/logo-green-2x.png"
+					/>
+				</picture>
 			</div>
 			<div class="row">
 				<div class="col-1-of-2">
@@ -515,5 +548,30 @@
 				</div>
 			</div>
 		</footer>
+
+		<div class="popup" id="popup">
+			<div class="popup__content">
+				<div class="popup__left">
+					<img src="img/nat-8.jpg" alt="tour photo" class="popup__img" />
+					<img src="img/nat-9.jpg" alt="tour photo" class="popup__img" />
+				</div>
+				<div class="popup__right">
+					<a href="#section-tours" class="popup__close">&times;</a>
+					<h2 class="heading-secondary u-margin-bottom-small">
+						Start Booking now
+					</h2>
+					<h3 class="heading-tertiary u-margin-bottom-small">
+						Important &ndash; Please read these terms before booking.
+					</h3>
+					<p class="popup__text">
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
+						explicabo, enim consequuntur voluptas voluptates veniam! Earum
+						voluptatum alias cum ea temporibus libero ex ad illum praesentium
+						ipsa! Totam, in molestias?
+					</p>
+					<a href="#" class="btn btn--green">Book now</a>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
